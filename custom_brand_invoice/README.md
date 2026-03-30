@@ -39,4 +39,4 @@ Open any customer invoice → select **Commercial Brand** → print PDF.
 
 ## Support
 
-support@framarketing.es | framarketing.es
+info@framarketing.es | framarketing.es
