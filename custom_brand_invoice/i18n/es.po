@@ -1,0 +1,92 @@
+# Spanish translation for Invoice Brand Selector
+# Copyright (C) 2026 Framarketing
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-30 00:00+0000\n"
+"PO-Revision-Date: 2026-03-30 00:00+0000\n"
+"Last-Translator: Framarketing <info@framarketing.es>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Nombre y descripción del módulo
+msgid "Invoice Brand Selector"
+msgstr "Selector de Marca en Facturas"
+
+msgid "Manage multiple commercial brands on customer invoices"
+msgstr "Gestiona múltiples marcas comerciales en facturas de clientes"
+
+# Modelo brand.profile
+msgid "Commercial Brand Profile"
+msgstr "Perfil de Marca Comercial"
+
+msgid "Brand Name"
+msgstr "Nombre de la marca"
+
+msgid "Sequence"
+msgstr "Secuencia"
+
+msgid "Logo"
+msgstr "Logotipo"
+
+msgid "Primary Color"
+msgstr "Color primario"
+
+msgid "Header table color. Hex format: #RRGGBB"
+msgstr "Color de cabecera de tabla. Formato hex: #RRGGBB"
+
+msgid "Email"
+msgstr "Correo electrónico"
+
+msgid "Website"
+msgstr "Sitio web"
+
+msgid "Phone"
+msgstr "Teléfono"
+
+msgid "Tax ID"
+msgstr "NIF / CIF"
+
+msgid "Custom Footer Text"
+msgstr "Texto de pie de página personalizado"
+
+msgid "If filled, replaces email/website/phone in the PDF footer."
+msgstr "Si se rellena, sustituye el email/web/teléfono en el pie del PDF."
+
+msgid "Invoices"
+msgstr "Facturas"
+
+# Modelo account.move
+msgid "Commercial Brand"
+msgstr "Marca Comercial"
+
+# Vistas
+msgid "Commercial Brands"
+msgstr "Marcas Comerciales"
+
+msgid "Commercial Brand Profile"
+msgstr "Perfil de Marca Comercial"
+
+msgid "Visual Identity"
+msgstr "Identidad Visual"
+
+msgid "Contact Info"
+msgstr "Datos de Contacto"
+
+msgid "Custom Footer"
+msgstr "Pie de Página Personalizado"
+
+msgid "e.g. info@mybrand.com | mybrand.com | +34 600 000 000\nLeave empty to auto-build from contact info above."
+msgstr "Ej: info@mimarca.es | mimarca.es | +34 600 000 000\nDejar vacío para construirlo automáticamente con los datos de contacto."
+
+# Acción y menú
+msgid "Invoices - %s"
+msgstr "Facturas - %s"
+
+# Botones y etiquetas genéricas
+msgid "Brand Name..."
+msgstr "Nombre de la marca..."

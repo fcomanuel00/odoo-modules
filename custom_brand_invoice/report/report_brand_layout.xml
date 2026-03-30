@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="external_layout_bubble_brand"
+              inherit_id="web.external_layout_bubble"
+              name="Layout Bubble - Commercial Brand">
+
+        <!-- LOGO: use brand logo if available -->
+        <xpath expr="//img[contains(@class,'o_company_logo')]" position="replace">
+            <t t-if="o and o._name == 'account.move' and o.brand_id and o.brand_id.logo">
+                <img class="o_company_logo mb-2"
+                     t-att-src="'data:image/png;base64,%s' % o.brand_id.logo.decode()"
+                     t-att-alt="o.brand_id.name"/>
+            </t>
+            <t t-else="">
+                <img t-if="company.logo"
+                     class="o_company_logo mb-2"
+                     t-att-src="image_data_uri(company.logo)"
+                     alt="Logo"/>
+            </t>
+        </xpath>
+
+        <!-- FOOTER: custom text or auto-built from contact fields -->
+        <xpath expr="//div[contains(@class,'border-top') and contains(@class,'pt-2')]"
+               position="replace">
+            <t t-if="o and o._name == 'account.move' and o.brand_id">
+                <div class="border-top pt-2 text-muted">
+                    <t t-if="o.brand_id.footer_text">
+                        <t t-out="o.brand_id.footer_text"/>
+                    </t>
+                    <t t-else="">
+                        <t t-if="o.brand_id.phone">
+                            <t t-out="o.brand_id.phone"/><t t-if="o.brand_id.email or o.brand_id.website or o.brand_id.vat"> | </t>
+                        </t>
+                        <t t-if="o.brand_id.email">
+                            <t t-out="o.brand_id.email"/><t t-if="o.brand_id.website or o.brand_id.vat"> | </t>
+                        </t>
+                        <t t-if="o.brand_id.website">
+                            <t t-out="o.brand_id.website"/><t t-if="o.brand_id.vat"> | </t>
+                        </t>
+                        <t t-if="o.brand_id.vat">
+                            <t t-out="o.brand_id.vat"/>
+                        </t>
+                    </t>
+                </div>
+            </t>
+            <t t-else="">
+                <div class="border-top pt-2" t-field="company.report_footer"/>
+            </t>
+        </xpath>
+
+        <!-- PRIMARY COLOR: dynamic CSS for table header -->
+        <xpath expr="//div[contains(@t-attf-class,'article')]" position="before">
+            <t t-if="o and o._name == 'account.move' and o.brand_id and o.brand_id.primary_color">
+                <style>
+                    .o_report_layout_bubble thead tr th,
+                    .o_report_layout_bubble tfoot td.o_price_total {
+                        background-color: <t t-out="o.brand_id.primary_color"/> !important;
+                    }
+                </style>
+            </t>
+        </xpath>
+
+    </template>
+</odoo>
