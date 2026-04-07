@@ -16,6 +16,7 @@ class BrandProfile(models.Model):
 
     # Visual identity
     logo = fields.Binary(string='Logo', attachment=True)
+    secondary_color = fields.Char(string='Secondary Color', default='#666666')
     primary_color = fields.Char(
         string='Primary Color',
         default='#875A7B',

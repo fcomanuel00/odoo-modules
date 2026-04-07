@@ -29,6 +29,7 @@
                     <group>
                         <group string="Visual Identity">
                             <field name="primary_color" widget="color"/>
+                        <field name="secondary_color" widget="color"/>
                         </group>
                         <group string="Contact Info">
                             <field name="email"/>
