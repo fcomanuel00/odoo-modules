@@ -24,7 +24,7 @@ Use case
 Perfect for companies that operate under multiple commercial brands
 but share the same legal entity and accounting.
     ''',
-    'author': 'Francisco Manuel Rodriguez',
+    'author': 'Framarketing',
     'maintainer': 'Framarketing',
     'website': 'https://framarketing.es',
     'category': 'Invoicing',
